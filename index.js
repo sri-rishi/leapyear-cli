@@ -1,13 +1,13 @@
-var readlineSync = require("readline-sync");
-var chalk = require("chalk");
+const readlineSync = require("readline-sync");
+const chalk = require("chalk");
 
 
-var userName = readlineSync.question(chalk.red("What is your name? "));
+const userName = readlineSync.question(chalk.red("What is your name? "));
 
-console.log(chalk.bgBlack("Welcome " + userName));
+console.log(chalk.bgBlack(`Welcome ${userName}`));
 
-  function play(question) {
-    var userYear = readlineSync.question(chalk.greenBright
+const play = question => {
+    let userYear = readlineSync.question(chalk.greenBright
     (question));
     if(isNaN(userYear)){
       console.log(chalk.bgRed("Error: You have entered wrong type")); 
@@ -18,10 +18,10 @@ console.log(chalk.bgBlack("Welcome " + userName));
         console.log("Sorry! not a leap year");
       }
     }
-  }
+}
 
 
-var question ="Is your birth year is a leap year? ";
+const question ="Is your birth year is a leap year? ";
 
 play(question);
 
